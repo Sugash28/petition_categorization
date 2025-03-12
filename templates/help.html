@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Government Grievance Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header, .footer {
+            background: #006838;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .navigation-bar {
+            background: linear-gradient(to right, #4CAF50, #006838);
+            padding: 12px 0;
+            text-align: center;
+        }
+        .navigation-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+        .navigation-bar a:hover,
+        .navigation-bar a.active {
+            background: rgba(255,255,255,0.2);
+        }
+        .main-content {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .faq-section {
+            margin-bottom: 30px;
+        }
+        .faq-section h3 {
+            color: #006838;
+            margin-bottom: 15px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Government Grievance Portal</h1>
+    </div>
+    <div class="navigation-bar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('help') }}" class="active">Help</a>
+    </div>
+    <div class="main-content">
+        <h2>Help & FAQs</h2>
+        <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <h4>How do I submit a grievance?</h4>
+                <p>To submit a grievance, click on the "Submit Grievance" button on the homepage and fill out the required details in the form.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How can I track the status of my grievance?</h4>
+                <p>You can track the status of your grievance by logging into your account and navigating to the "My Grievances" section.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What should I do if I forget my password?</h4>
+                <p>If you forget your password, click on the "Forgot Password" link on the login page and follow the instructions to reset your password.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I contact support?</h4>
+                <p>You can contact support by emailing us at support@grievanceportal.gov.in or calling our toll-free number 1800-XXX-XXXX.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Government Grievance Portal. All Rights Reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 40px 0;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .category-image {
+            width: 40%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .category-image:hover {
+            transform: scale(1.02);
+        }
+
+        .section-content {
+            width: 55%;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .priority-box {
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .priority-box h3 {
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        .priority-box p {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .category-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Services</h1>
+
+        <!-- Crime Section -->
+        <section class="section-container">
+            <img src="path/to/crime-image.jpg" alt="Crime Category" class="category-image">
+            <div class="section-content">
+                <h2>Crime</h2>
+                <p>Crime involves illegal actions that harm individuals, property, or society as a whole. Common types of crimes include theft, assault, fraud, and violence. Law enforcement agencies focus on reducing crime to improve public safety.</p>
+                <div class="priority-box">
+                    <h3>Priority: High</h3>
+                    <p>Crime prevention and intervention are considered high priorities due to their direct impact on community safety and well-being. Law enforcement agencies act swiftly and decisively to reduce crime rates.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transport Section -->
+        <section class="section-container">
+            <img src="path/to/transport-image.jpg" alt="Transport Category" class="category-image">
+            <div class="section-content">
+                <h2>Transport</h2>
+                <p>Transport refers to the movement of people and goods from one location to another. It includes roads, railways, air travel, and maritime routes. Efficient transport systems are crucial for economic growth and public accessibility.</p>
+                <div class="priority-box">
+                    <h3>Priority: Medium</h3>
+                    <p>Transport is an essential service, but the priority level varies depending on region and infrastructure. Enhancing safety, reducing traffic congestion, and improving accessibility are key goals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section-container">
+            <img src="path/to/education-image.jpg" alt="Education Category" class="category-image">
+            <div class="section-content">
+                <h2>Education</h2>
+                <p>Education is the foundation of personal and societal growth. It equips individuals with knowledge, skills, and values to contribute meaningfully to society. Education encompasses schools, colleges, and vocational training.</p>
+                <div class="priority-box">
+                    <h3>Priority: High</h3>
+                    <p>Education is a high priority as it directly influences future generations' opportunities, social mobility, and economic development. Ensuring access to quality education for all is essential for social progress.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Grid (Healthcare, Environment, Technology) -->
+        <section class="category-grid">
+            <!-- Healthcare Category -->
+            <div class="category-card">
+                <img src="path/to/healthcare-image.jpg" alt="Healthcare Category" class="category-image">
+                <h3 class="category-title">Healthcare</h3>
+                <p class="category-description">Healthcare includes medical services, treatment, and preventive care that maintain the physical and mental well-being of individuals. It is critical to have accessible and affordable healthcare services for all.</p>
+                <div class="priority-box">
+                    <h3>Priority: High</h3>
+                    <p>Healthcare is a top priority as it affects the quality of life, public health, and economic outcomes. Addressing healthcare access, affordability, and quality is essential for a healthier society.</p>
+                </div>
+            </div>
+
+            <!-- Environment Category -->
+            <div class="category-card">
+                <img src="path/to/environment-image.jpg" alt="Environment Category" class="category-image">
+                <h3 class="category-title">Environment</h3>
+                <p class="category-description">The environment encompasses natural resources, ecosystems, and the impact of human activities on the planet. Sustainable management of the environment is key to ensuring long-term ecological balance.</p>
+                <div class="priority-box">
+                    <h3>Priority: Medium</h3>
+                    <p>Environmental protection is a medium priority, although growing concerns about climate change and pollution are pushing it to a higher level on the global agenda. Conservation efforts are essential for sustainable development.</p>
+                </div>
+            </div>
+
+            <!-- Technology Category -->
+            <div class="category-card">
+                <img src="path/to/technology-image.jpg" alt="Technology Category" class="category-image">
+                <h3 class="category-title">Technology</h3>
+                <p class="category-description">Technology refers to the application of scientific knowledge for practical purposes, especially in industries such as computing, electronics, and communications. It drives innovation and economic growth.</p>
+                <div class="priority-box">
+                    <h3>Priority: Medium</h3>
+                    <p>Technology is a medium priority for the public sector, focusing on developing digital infrastructure, cybersecurity, and fostering innovation to drive economic growth and improve everyday life.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

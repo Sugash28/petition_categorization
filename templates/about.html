@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Government Grievance Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #333;
+            font-size: 18px; /* Larger base font size */
+        }
+
+        .header {
+            background: #006838;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 36px; /* Larger header font size */
+            font-weight: bold;
+            border-bottom: 5px solid #4CAF50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .header img {
+            height: 80px; /* Larger logo size */
+            border-radius: 50%;
+        }
+
+        .navigation-bar {
+            background: linear-gradient(to right, #4CAF50, #006838);
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navigation-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px; /* Larger navigation font size */
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .navigation-bar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .navigation-bar a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-container {
+            margin: 40px 0;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .about-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: scale(1.02);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 36px; /* Larger stat number */
+            color: #006838;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .features-list li i {
+            color: #4CAF50;
+            font-size: 25px; /* Larger icon size */
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .contact-item i {
+            color: #006838;
+            font-size: 30px; /* Larger icon size */
+        }
+
+        .footer {
+            background: #006838;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            font-size: 18px; /* Larger footer font size */
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 15px;
+                padding: 25px;
+            }
+
+            .stats-grid,
+            .features-list,
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 250px;
+            }
+
+            .header img {
+                height: 60px;
+            }
+
+            .navigation-bar {
+                padding: 12px;
+            }
+
+            .navigation-bar a {
+                padding: 8px 15px;
+                margin: 5px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Government Logo">
+        <span>Government Grievance Portal</span>
+    </div>
+
+    <div class="navigation-bar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}"class="active">About</a>
+        <a href="{{ url_for('services') }}">Services</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('help') }}" >Help</a>
+    </div>
+
+    <div class="main-content">
+        <section class="section-container">
+            <h2>About Government Grievance Portal</h2>
+            <img src="{{ url_for('static', filename='images/government_building.jpg') }}" alt="Government Building" class="about-image">
+            <p>The Government Grievance Portal is a state-of-the-art platform designed to streamline the grievance redressal process.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">00,000+</div>
+                    <div>Grievances Resolved</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">0%</div>
+                    <div>Resolution Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <div>Support Available</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h3>Our Features</h3>
+            <img src="{{ url_for('static', filename='images/gg1.jpg') }}" alt="Features" class="about-image">
+            <ul class="features-list">
+                <li><i class="fas fa-clock"></i>24/7 Grievance Submission</li>
+                <li><i class="fas fa-robot"></i>AI-powered Categorization</li>
+                <li><i class="fas fa-bell"></i>Real-time Status Updates</li>
+                <li><i class="fas fa-shield-alt"></i>Secure Communication</li>
+                <li><i class="fas fa-language"></i>Multi-language Support</li>
+                <li><i class="fas fa-chart-line"></i>Analytics Dashboard</li>
+            </ul>
+        </section>
+
+        <section class="section-container">
+            <h3>Contact Information</h3>
+            <img src="{{ url_for('static', filename='images/service.jpg') }}" alt="Contact" class="about-image">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@grievanceportal.gov.in</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>1800-XXX-XXXX (Toll Free)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <p>24/7 Support Available</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>New Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Government Grievance Portal. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
